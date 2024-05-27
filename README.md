@@ -1,3 +1,6 @@
+Do you have any questions, suggestions, feedback or need help?
+Please open an [issue](https://github.com/mxschmdt/mrqa-prompting-gen/issues/new/choose)!
+
 # Paper
 [![arXiv](https://img.shields.io/badge/arXiv-2405.09335-b31b1b.svg?style=flat)](https://arxiv.org/abs/2405.09335)
 [![Generic badge](https://img.shields.io/badge/LREC_COLING_2024-Link-GREEN.svg?style=flat)](https://aclanthology.org/2024.lrec-main.1153/)
@@ -5,13 +8,18 @@
 # Installation
 Clone the repo and install the required Python packages (preferably in a virtual environment) from `requirements_install_first.txt` first followed by `requirements.txt`.
 
-# Download Data
-You can load any dataset that is compatible with the datasets library.
+# Dataset Download & Usage
+You can load any dataset that is compatible with HF's datasets library.
+See [https://huggingface.co/datasets](https://huggingface.co/datasets) for a list of available datasets.
 
 To download the datasets of the few-shot MRQA benchmark, see [https://github.com/oriram/splinter#downloading-few-shot-mrqa-splits](https://github.com/oriram/splinter#downloading-few-shot-mrqa-splits).
 
-<!-- # Run
-There are scripts for training question generation (qg) models (run_training_qg_few_shot.sh), generating data and training RC models using synthetic data from qg models (run_qg_few_shot.sh & run_qg_zero_shot.sh) and training Prompting models for RC (run_rc_few_shot.sh). -->
+Custom datasets can further be defined in the config file `data/datasets.ini`.
+There you can also specify the path to the downloaded few-shot MRQA benchmark.
+
+For `--train-dataset`, `--eval-dataset` and `--predict-dataset` you can then use the names from the datasets library or as specified in the config file, e.g., `--train-dataset sp-squad-16-0`.
+You can also directly specify splits as in `--train-dataset st-squad:train` (for the train split).
+
 
 # Data Generation
 
@@ -24,13 +32,13 @@ python run.py qg \
     --template-idx 22 \
     --lang en \
     --num_worker 5 \
-    --per_device_train_batch_size 1 \
-    --gradient_accumulation_steps 32 \
-    --per_device_eval_batch_size 1 \
     --do_train \
     --train-dataset sp-squad-16-0 \
+    --per_device_train_batch_size 1 \
+    --gradient_accumulation_steps 32 \
     --do_eval \
-    --eval-dataset sp-squad-dev::1 \
+    --eval-dataset sp-squad-dev \
+    --per_device_eval_batch_size 1 \
     --save_strategy steps \
     --evaluation_strategy steps \
     --eval_steps 5 --logging_steps 5 \
@@ -54,8 +62,6 @@ python run.py qg \
 for training a T5 v1.1 large model on a 16-split from the SQuAD subset from the few-shot MRQA benchmark.
 Note that this assumes to have downloaded the benchmark data to `mrqa-few-shot` as specified in `data/datasets.ini`.
 
-In general, datasets can be referenced by a name from [HF's datasets library](https://huggingface.co/datasets) or as specified in `data/datasets.ini`.
-
 See `utils/args.py` for arguments or run `python run.py -h`.
 Many arguments are provided by transformers (see https://huggingface.co/docs/transformers/v4.40.2/en/main_classes/trainer#transformers.TrainingArguments for a list and description of these parameters).
 
@@ -70,9 +76,6 @@ python run.py qg \
     --template-idx 22 \
     --lang en \
     --num_worker 5 \
-    --per_device_train_batch_size 1 \
-    --gradient_accumulation_steps 32 \
-    --per_device_eval_batch_size 1 \
     --do_predict \
     --predict-dataset squad:train \
     --predict-dir gen_data/squad_train \
