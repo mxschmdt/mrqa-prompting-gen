@@ -1,3 +1,5 @@
+**This repository contains the code for our paper 'Prompting-based Synthetic Data Generation for Few-Shot Question Answering'.**
+
 Do you have any questions, suggestions, feedback or need help?
 Please open an [issue](https://github.com/mxschmdt/mrqa-prompting-gen/issues/new/choose)!
 
