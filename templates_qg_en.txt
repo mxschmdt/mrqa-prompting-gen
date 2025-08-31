@@ -1,0 +1,23 @@
+{"meta":"context", "shortenable": False} {"soft": "Given previous context, the question to the answer"} {"meta":"answers", "post_processing": lambda x: x['text'][0], "shortenable": False} {"soft": "is"} {"mask"}
+{"meta":"context", "shortenable": False} {"soft": "given previous context, the question to the answer"} {"meta":"answers", "post_processing": lambda x: x['text'][0], "shortenable": False} {"soft": "is"} {"mask"}
+{"soft": "Context:"} {"meta":"context", "shortenable": False} {"soft": "Answer:"} {"meta":"answers", "post_processing": lambda x: x['text'][0], "shortenable": False} {"soft": "Question:"} {"mask"}
+{"soft": "context:"} {"meta":"context", "shortenable": False} {"soft": "answer:"} {"meta":"answers", "post_processing": lambda x: x['text'][0], "shortenable": False} {"soft": "question:"} {"mask"}
+{"soft": "Question:"} {"mask"} {"soft": "Context:"} {"meta":"context", "shortenable": False} {"soft": "Answer:"} {"meta":"answers", "post_processing": lambda x: x['text'][0], "shortenable": False}
+{"soft": "question:"} {"mask"} {"soft": "context:"} {"meta":"context", "shortenable": False} {"soft": "answer:"} {"meta":"answers", "post_processing": lambda x: x['text'][0], "shortenable": False}
+{"soft": "Context:"} {"meta":"context", "shortenable": False} {"soft": "Question:"} {"mask"} {"soft": "Answer:"} {"meta":"answers", "post_processing": lambda x: x['text'][0], "shortenable": False}
+{"soft": "context:"} {"meta":"context", "shortenable": False} {"soft": "question:"} {"mask"} {"soft": "answer:"} {"meta":"answers", "post_processing": lambda x: x['text'][0], "shortenable": False}
+{"meta":"context", "shortenable": False} {"mask"} {"meta":"answers", "post_processing": lambda x: x['text'][0], "shortenable": False}
+{"soft": "context:"} {"meta":"context", "shortenable": False} {"meta":"answers", "post_processing": lambda x: x['text'][0], "shortenable": False} answers the question {"mask"}
+{"soft": "the question"} {"mask"} {"soft": "can be answered by the passage"} {"meta":"context", "shortenable": False} {"soft": "as"} {"meta":"answers", "post_processing": lambda x: x['text'][0], "shortenable": False}
+{"meta":"context", "shortenable": False} given this context, the question {"mask"} {"soft": "is answered by"} {"meta":"answers", "post_processing": lambda x: x['text'][0], "shortenable": False}
+{"meta":"context", "shortenable": False} given this context, answer is {"meta":"answers", "post_processing": lambda x: x['text'][0], "shortenable": False} {"soft": "for question"} {"mask"}
+{"meta":"context", "shortenable": False} given this context, answer is '{"meta":"answers", "post_processing": lambda x: x['text'][0], "shortenable": False}' {"soft": "for question"} {"mask"}
+{"meta":"context", "shortenable": False} answer: {"meta":"answers", "post_processing": lambda x: x['text'][0], "shortenable": False}' {"soft": "question:"} {"mask"}
+{"meta":"context", "shortenable": False} {"soft": "given previous context"} {"meta":"answers", "post_processing": lambda x: x['text'][0], "shortenable": False} {"soft": "can be described as"} {"mask"}
+{"meta":"context", "shortenable": False} {"soft": "based on previous context"} {"meta":"answers", "post_processing": lambda x: x['text'][0], "shortenable": False} {"soft": "can be described as"} {"mask"}
+{"meta":"context", "shortenable": False} {"soft": "based on previous context"} '{"meta":"answers", "post_processing": lambda x: x['text'][0], "shortenable": False}' {"soft": "can be described as"} {"mask"}
+{"meta":"context", "shortenable": False} {"soft": "based on previous context"} {"meta":"answers", "post_processing": lambda x: "'" + x['text'][0] + "'", "shortenable": False} {"soft": "can be described as"} {"mask"}
+{"meta":"context", "shortenable": False} {"soft": "given previous context, a question with the answer"} {"meta":"answers", "post_processing": lambda x: x['text'][0], "shortenable": False} {"soft": "is:"} {"mask"}
+{"meta":"context", "shortenable": False} {"soft": "given previous context, a question with the answer"} {"meta":"answers", "post_processing": lambda x: "'" + x['text'][0] + "'", "shortenable": False} {"soft": "is:"} {"mask"}
+{"soft": None} {"meta":"context", "shortenable": False} {"soft": None} {"mask"} {"soft": None} {"meta":"answers", "post_processing": lambda x: x['text'][0], "shortenable": False}
+{"soft": "context:"} {"meta":"context", "shortenable": False} {"soft": "question:"} {"mask"} {"soft": "answer:"} {"meta":"answers", "post_processing": lambda x: x['text'][0], "shortenable": False} {"soft": "."}

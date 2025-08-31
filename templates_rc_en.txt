@@ -1,0 +1,22 @@
+{"meta":"context", "shortenable": False} {"soft": "Given previous context, the answer to the question"} {"meta":"question", "shortenable": False} {"soft": "is"} {"mask"}
+{"meta":"context", "shortenable": False} {"meta":"question", "shortenable": False} {"soft": "The answer is:"} {"mask"}
+{"soft": "Context:"} {"meta":"context", "shortenable": False} {"soft": "Question:"} {"meta":"question", "shortenable": False} {"soft": "Answer:"} {"mask"}
+{"meta":"context", "shortenable": False} {"meta":"question"} {"mask"}
+{"soft": "context:"} {"meta":"context", "shortenable": False} {"soft": "question:"} {"meta":"question", "shortenable": False} {"soft": "answer:"} {"mask"}
+{"soft": None, "duplicate": 5} {"meta":"context", "shortenable": False} {"soft": None, "duplicate": 5} {"meta":"question"} {"soft": None, "duplicate": 5} {"mask"}
+{"meta":"context", "shortenable": False} {"meta":"question"} {"soft": None, "duplicate": 1} {"mask"}
+{"meta":"context", "shortenable": False} {"meta":"question"} {"soft": None, "duplicate": 2} {"mask"}
+{"meta":"context", "shortenable": False} {"meta":"question"} {"soft": None, "duplicate": 3} {"mask"}
+{"meta":"context", "shortenable": False} {"soft": None, "duplicate": 1} {"meta":"question"} {"soft": None, "duplicate": 1} {"mask"}
+{"meta":"context", "shortenable": False} {"soft": "question:"} {"meta":"question"} {"soft": "answer:"} {"mask"}
+{"text": "Context:"} {"meta":"context", "shortenable": False} {"text": "Question:"} {"meta":"question", "shortenable": False} {"text": "Answer:"} {"mask"}
+{"soft": "Text:"} {"meta":"context", "shortenable": False} {"soft": "Question:"} {"meta":"question", "shortenable": False} {"soft": "Answer:"} {"mask"} {"soft": "."}
+{"soft": "Context:"} {"meta":"context", "shortenable": False} {"soft": "Question:"} {"meta":"question", "shortenable": False} {"soft": "Answer:"} {"mask"} {"soft": "."}
+{"meta":"context", "shortenable": False} {"soft": "Question:"} {"meta":"question", "shortenable": False} {"soft": "Answer:"} {"mask"} {"soft": "."}
+{"meta":"context", "shortenable": False} {"meta":"question", "shortenable": False} {"mask"} {"soft": "."}
+{"meta":"context", "shortenable": False} {"meta":"question", "shortenable": False} {"mask"}
+{"soft": "context:"} {"meta":"context", "shortenable": False} {"soft": "question:"} {"meta":"question", "shortenable": False} {"soft": "answer:"} {"mask"} {"soft": "."}
+{"soft": "text:"} {"meta":"context", "shortenable": False} {"soft": "question:"} {"meta":"question", "shortenable": False} {"soft": "answer:"} {"mask"} {"soft": "."}
+{"soft": "context:"} {"meta":"context", "shortenable": False} {"soft": "answer the following question:"} {"meta":"question", "shortenable": False} {"soft": "answer:"} {"mask"} {"soft": "."}
+{"soft": "context:"} {"meta":"context", "shortenable": False} {"soft": "answer the following question:"} {"meta":"question", "shortenable": False} {"mask"} {"soft": "."}
+{"soft": "question:"} {"meta":"question", "shortenable": False} {"soft": "context:"} {"meta":"context", "shortenable": False} {"soft": "answer:"} {"mask"} {"soft": "."}
